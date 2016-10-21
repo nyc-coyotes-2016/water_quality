@@ -1,5 +1,6 @@
 require 'open-uri'
 require 'json'
+
 class WaterQualityController
 attr_reader :incidents
 BASE_URL = "https://data.cityofnewyork.us/resource/qfe3-6dkn.json"
@@ -8,12 +9,8 @@ DESCRIPTOR_QUERY = "descriptor="
 
   def initialize(args)
     @incidents =  args.fetch(:incidents,[])
-    #@view = args.fetch(:view)
-    #@model = args.fetch(:model)
   end
-  def display
-    incidents.each {|report| p report}
-  end
+   include InfoDisplay
 
   def run
     incident_gen(api_parse(ask))
