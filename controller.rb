@@ -15,6 +15,7 @@ ZIP_ID_QUERY = "incident_zip="
 
   def run
     incident_gen(api_parse(ask))
+    display
   end
 
   def ask
