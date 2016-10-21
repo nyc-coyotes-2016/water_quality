@@ -10,7 +10,7 @@ DESCRIPTOR_QUERY = "descriptor="
   def initialize(args)
     @incidents =  args.fetch(:incidents,[])
   end
-   include InfoDisplay
+   include InfoDisplayable
 
   def run
     incident_gen(api_parse(ask))
