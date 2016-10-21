@@ -9,3 +9,4 @@ test = WaterQualityController.new(:incidents => [])
 test.run
 test.display
 
+
