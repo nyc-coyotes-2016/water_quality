@@ -3,7 +3,6 @@ class Incidents
 
   def initialize(args = {})
     @water_incidents = args.fetch(:water_incidents, [])
-
   end
 
 end
